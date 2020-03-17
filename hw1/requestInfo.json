@@ -1,0 +1,46 @@
+{
+    "logs": [
+        {
+            "status": "OK",
+            "method": "GET",
+            "url": "/asdasd",
+            "time": 1584467328540
+        },
+        {
+            "status": "OK",
+            "method": "POST",
+            "url": "/",
+            "time": 1584467335775
+        },
+        {
+            "status": "OK",
+            "method": "DELETE",
+            "url": "/",
+            "time": 1584467339138
+        },
+        {
+            "status": "OK",
+            "method": "GET",
+            "url": "/",
+            "time": 1584467343639
+        },
+        {
+            "status": "OK",
+            "method": "PUT",
+            "url": "/",
+            "time": 1584467347953
+        },
+        {
+            "status": "OK",
+            "method": "PATCH",
+            "url": "/",
+            "time": 1584467352331
+        },
+        {
+            "status": "OK",
+            "method": "GET",
+            "url": "/",
+            "time": 1584467354867
+        }
+    ]
+}
