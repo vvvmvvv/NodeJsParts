@@ -3,17 +3,17 @@ const fs = require('fs');
 const PATH = './requestInfo.json';
 
 http.createServer((request, response) => {
+    const status = 'OK';
     const {method, url} = request;
-    response.writeHead(200, {'Content-type': 'application/json'});
-    const {statusMessage : status} = response;
     const data = {status, method, url, time: Date.now()};
     addJson(data, response);
+    response.writeHead(200, {'Content-type': 'application/json'});
     response.end(JSON.stringify({status}));
 }).listen(8081);
 
 let addJson = (data, response) => {
     try {
-        throw new Error("ERROR!!!");
+        //throw new Error("ERROR!!!");
         let parsed = {logs: []};
 
         if (fs.existsSync(PATH)) {
@@ -32,7 +32,7 @@ let addJson = (data, response) => {
         fs.writeFileSync(PATH, parsed,  'utf8');
     } catch (error) {
         response.writeHead(500, {'Content-type': 'application/json'})
-        response.end(JSON.stringify({error}));
+        response.end(JSON.stringify({error: error.message}));
         //process.exit(1);
     }
 }
