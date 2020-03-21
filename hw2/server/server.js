@@ -7,6 +7,7 @@ const cors = require('cors');
 const PORT = 8081;
 
 const authRoute = require('./routes/api/auth');
+const noteRoute = require('./routes/api/notes');
 
 dotenv.config();
 
@@ -14,10 +15,14 @@ mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopo
     console.log("Database connected!")
 );
 
+app.get('/', (req, res) => {
+    res.send("Home Page");   
+})
 
 app.use(express.json());
 app.use(cors());
 app.use('/api/user', authRoute);
+app.use('/api/notes', noteRoute);
 
 
 

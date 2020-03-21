@@ -13,6 +13,7 @@ export default function Register() {
         const user = {name,email, password};
         console.log(user);
         await axios.post(REGISTER_API, {name,email, password});
+        
     }
     
     const handleNameInput = (e) => {
