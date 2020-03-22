@@ -11,13 +11,10 @@ const noteRoute = require('./routes/api/notes');
 
 dotenv.config();
 
-mongoose.connect(process.env.DB_CONNECT, { useNewUrlParser: true, useUnifiedTopology: true}, () => 
+mongoose.connect(process.env.DB_CONNECT, { useFindAndModify: false, useNewUrlParser: true, useUnifiedTopology: true}, () => 
     console.log("Database connected!")
 );
 
-app.get('/', (req, res) => {
-    res.send("Home Page");   
-})
 
 app.use(express.json());
 app.use(cors());

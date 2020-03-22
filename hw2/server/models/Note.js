@@ -14,10 +14,8 @@ const noteSchema = new mongoose.Schema({
         min: 1
     },
     author: {
-        type: String,
-        required: true,
-        max: 1024,
-        min: 6
+        type: mongoose.Types.ObjectId,
+        required: true
     },
     isChecked: {
         type: Boolean,
@@ -30,4 +28,4 @@ const noteSchema = new mongoose.Schema({
     }
 });
 
-module.exports = mongoose.model('Note', noteSchema );
+module.exports = mongoose.model('notes', noteSchema );
