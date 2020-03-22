@@ -13,7 +13,6 @@ export default function Login() {
     const fetchLogin = async (e) => {
         e.preventDefault();
         const token = await axios.post(LOGIN_API, {email, password});
-        console.log(token);
         localStorage.setItem('token', token.data);
         setRouteRedirect(true);
     }

@@ -13,7 +13,7 @@ export default function Register() {
     const fetchRegistry = async (e) => {
         e.preventDefault();
         await axios.post(REGISTER_API, {name,email, password});
-
+        alert("Successfully registered! Go to LOGIN!");
     }
     
     const handleNameInput = (e) => {
@@ -48,7 +48,8 @@ export default function Register() {
             <br/>
             <button type="submit" className="register">Register</button><br/>
             <hr/>
-            <span>Maybe, you already have an  account?<Link to="/login">Login</Link> </span>
+            <span>Maybe, you already have an  account?<Link to="/login">Login</Link> </span><br/>
+            <Link to="/"> Back to Home </Link>
         </form>
         </>
     );
