@@ -1,0 +1,44 @@
+.notes{
+    background-color: skyblue;
+
+    &__form{
+        display: flex;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    &__form-button{
+        padding: 20px;
+    }
+
+    &__header{
+        display: flex;
+        justify-content: center;
+    }
+
+    &__list{
+        padding: 10px;
+    }
+}
+.delete{
+    background-color: red;
+    font-size: 14px;
+    border: 0;
+    padding: 10px;
+    margin: 10px 40px;
+    cursor: pointer;
+  }
+
+.add_note{
+    cursor: pointer;
+    padding: 10px;
+    width: 400px;
+    background-color: slateblue;
+}
+
+.input-checkbox{
+    padding: 20px;
+    margin: 20px;
+    transform:scale(2.0);
+    cursor:pointer;
+}

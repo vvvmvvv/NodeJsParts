@@ -23,9 +23,11 @@ export default function Note({note, fetchNotes}) {
 
     return (
         <li>
-            <input type="checkbox" checked={note.isChecked} onChange={(e) => checkNote(e, note._id)} />
-            {note.title}
-            <button onClick={(e) => deleteNote(e, note._id)}>Delete</button>
+            <input className="input-checkbox" type="checkbox" checked={note.isChecked} onChange={(e) => checkNote(e, note._id)} />
+            {note.title}<br/>
+            <span>Description: </span>{note.description}
+            <button onClick={(e) => deleteNote(e, note._id)} className="delete">Delete</button>
+            <hr/>
         </li>
     );
 }

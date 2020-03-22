@@ -42,10 +42,12 @@ export default function Register() {
         <>
         <h1>Register:</h1>
         <form onSubmit={fetchRegistry}>
-            <input type="text" name="name" value={name} onChange={handleNameInput}/>
-            <input type="email" name="email" value={email} onChange={handleEmailInput}/>
-            <input type="password" name="password" value={password} onChange={handlePasswordInput}/>
-            <button type="submit">Register</button><br/>
+            <span>Enter  Name: </span><input type="text"  minLength="6" name="name" className="normalizeInput" value={name} onChange={handleNameInput} required /><br/>
+            <span>Enter  Email: </span><input type="email" minLength="6" name="email" className="normalizeInput" value={email} onChange={handleEmailInput} required/><br/>
+            <span>Enter  Password: </span><input type="password" minLength="6" name="password" className="normalizeInput" value={password} onChange={handlePasswordInput} required />
+            <br/>
+            <button type="submit" className="register">Register</button><br/>
+            <hr/>
             <span>Maybe, you already have an  account?<Link to="/login">Login</Link> </span>
         </form>
         </>

@@ -41,10 +41,15 @@ export default function Login() {
         <>
         <h1> LOGIN: </h1>
         <form onSubmit={fetchLogin}>
-            <input type="email" name="email" value={email} onChange={handleEmailInput}/>
-            <input type="password" name="password" value={password} onChange={handlePasswordInput}/>
-            <button type="submit">Login</button><br/>
-            <span>If you dont`t have an account, you can register!<Link to="/register">Register</Link> </span>
+            <span>Enter email: </span><input type="email" minLength="6" className="normalizeInput" name="email" value={email} onChange={handleEmailInput} required /><br/>
+            <br/>
+            <span>Enter password: </span><input type="password" minLength="6" className="normalizeInput" name="password" value={password} onChange={handlePasswordInput} required/>
+            <br/>
+            <button type="submit" className="login">Login</button><br/>
+            <hr/>
+            
+            <span>If you dont`t have an account, you can register!<Link to="/register">Register</Link> </span><br/>
+            <Link to="/"> Back to Home </Link>
         </form>
         </>
     );

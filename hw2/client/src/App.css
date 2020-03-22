@@ -1,38 +1,68 @@
 .App {
+  max-width: 1120px;
+  margin: 0 auto;
+  
+}
+
+h1 {
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+li{
+  list-style: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.logout{
+  height: 40px;
+  width: 100px;
+  background-color: black;
   color: white;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
 }
 
-.App-link {
-  color: #61dafb;
+.login{
+  text-decoration: none;
+  height: 40px;
+  width: 100px;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+
+}
+.register{
+  text-decoration: none;
+  background-color: slateblue;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login{
+  text-decoration: none;
+  background-color: black;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  margin: 10px;
+
+}
+
+
+.normalizeInput{
+  height: 30px;
+  width: 200px;
+  padding: 5px;
+  margin: 5px;
+}
+
+.normilizeDescr{
+  height: 100px;
+  width:  500px;
+
 }

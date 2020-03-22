@@ -18,18 +18,21 @@ export default function Main() {
 
     return (
         <>
-        <h1> HoME </h1>
+        <h1> Homework #2 prepared by Volodymyr Mikulin  </h1>
         {isAuthorized
             ? (
                 <>
-                    <button type="button" onClick={handleLogout}>LOGOUT</button>
+                    <button type="button" className="logout" onClick={handleLogout}>LOGOUT</button>
                     <Notes/>
                 </>
             ) : (
                 <>
-                    <Link to="/login"> LOGIN</Link>
+                
+                    <Link className="login" to="/login"> LOGIN</Link>
                     <hr/>
-                    <Link to="/register"> REGISTER</Link>
+                    <br/>
+                    <Link className="register" to="/register"> REGISTER</Link>
+                    <h3>To work with notes you must login!</h3>
                 </>
             )} 
         </>
